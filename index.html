@@ -1,5 +1,4 @@
-
-
+<!DOCTYPE html>
 
 <html>
 
@@ -9,7 +8,7 @@
 
 <h2>Community Survey</h2>
 
-
+<form action="/action_page.php">
 
 <div id="question1">
   <label for="q1">Hi! Am I speaking to _______</label><br>
@@ -90,8 +89,7 @@
 
 
 <div id="section2" Style="display:none;">
-
-
+<!— first new form if they answered yes to base question 2 —>
 
 <label for="bq2Ylv2">What about the police force makes you feel safe?</label><br>
    <input type="text" id="bq2Ylv2" name="feelingsAbout" required ><br><br>
@@ -116,7 +114,7 @@
 
 
 <div id="section3" Style="display:none;">
-
+<!—this question will appear if they answered yes to the previous form. Goes to the end dialogue after question is answered>
 
 <label for="bq2Ylv4">Why would you say they feel safe?</label><br>
         <input type="text" id="bq2Ylv4" name="WhyCommunitySafe" required><br><br><br>
@@ -137,7 +135,7 @@
 
 <div id="section4" Style="display:none;">
 
-
+<!— this question will appear if they answered no to question bq2Ylv3. This question will go to base question 3 after being submitted —>
 
 <label for="bq2Ylv5">Why would you say they don’t feel safe?</label><br>
 
@@ -161,15 +159,13 @@
 
 
 
-
-
+<!— if answer is unsure then go straight to end dialogue —>
 
 
 
 <div id="section5" Style="display:none;">
 
-
-— this form is for the answer unsure for base question 2 —>
+<!— this form is for the answer unsure for base question 2 —>
 
 <label for="bq2NSlv2">Would you say all members of your community feel safe around the police?</label><br>
 
@@ -191,7 +187,7 @@
 
 <div id="section6" Style="display:none;">
 
-
+<!— this question will appear if they answered yes to question bq2NSlv2 . Cuts to end dialogue after this question appears —>
 
 <label for="bq2NSlv3">Why would you say they feel safe?</label><br>
 
@@ -212,8 +208,7 @@
 
 <div id="section7" Style="display:none;">
 
-
-
+<!— this question will appear if they answered no to question bq2NSlv2. Goes to base question 3 after this question appears —>
 
 <label for="bq2NSlv4">Why would you say they don’t feel safe?</label><br>
 
@@ -239,8 +234,7 @@
 
 <div id="section8" Style="display:none;">
 
-
-
+<!— this question will appear if they answered no to the base question 2. Goes to base question 3 after this question appears —>
 
 <label for="bq2Nlv2">What about the police doesn’t make you feel safe?</label><br>
 
@@ -259,8 +253,7 @@
 
   <label for="bq3">Unsure</label><br><br>
 
-
-
+<!— this question will appear if they answered no to the base question 2. Goes to base question 3 after this question appears —>
 </div>
 
 
@@ -288,14 +281,13 @@
 
 
 
-
+<!— if yes is answered to bq3, cut to end dialogue. —>
 
 
 
 <div id="section10" Style="display:none;">
 
-
-
+<!— this question will appear if unsure is answered to bq3. —>
 
 <label for="bq3NSlv2">That’s okay. Do you believe that these things make out community safer?</label><br>
 
@@ -311,8 +303,7 @@
 
   <label for="bq3NSlv2">Unsure</label><br><br>
 
-
-
+<!— if yes is answered to this question, go to end dialogue.  If no is answered to this question, go the form that would appear is no was answered to bq3 —>
 
 </div>
  
@@ -321,8 +312,7 @@
 
 <div id= "section11" Style="display:none;">
 
-
-
+<!— this question will appear if unsure is answered to question bq3NSlv2. if no is answered to this question, cut to end dialogue. The question details will be provided tmr.—>
 
 <label for="bq3NSlv3"> Would you be interested in hearing about local police budget information so you can make an informed decision on the issue?</label><br>
 
@@ -339,7 +329,7 @@
 
 <div id="section12" Style="display:none;">
 
-
+<!— this form will appear if no is answered to bq3. —>
 
 <label for="bq3Nlv2">Do you think the money used to pay for this equipment could be spent anywhere better?</label><br>
 
@@ -355,7 +345,7 @@
 
   <label for="bq3Nlv2">Unsure</label><br><br>
 
-
+<!— if no is answered to this question, cut to end dialogue. If unsure is answered to this question, go to bq3Nlv3  —>
 
 </div>
 
@@ -363,8 +353,7 @@
 
 <div id="section13" Style="display:none;">
 
-
-
+<!— this form will appear if yes is answered to question bq3Nlv2 —>
 
 <label for="bq3Nlv3">If you could spend these funds anywhere in our community where would you spend these funds?</label><br>
 
@@ -382,16 +371,14 @@
 
   <label for="bq3Nlv4">No</label><br><br>
 
-
-
+<!—if no is answered to this question, cut to end dialogue. —>
 </div>
 
 
 
 <div id="section14" Style="display:none;">
 
-
-
+<!— this question will appear if yes is answered to question bq3Nlv4. If no, display a certain message before showing end dialogue —>
 
 <label for="bq3Nlv5">That’s great! Would you like to sign up to our email list for more information and volunteer opportunities to make the changes we need?</label><br>
 
@@ -409,7 +396,7 @@
 
 <div id="section15" Style="display:none;">
 
-
+<!— this question will appear if yes was answered to the email question bq3Nlv5. —>
 
 <label for="bq3Nlv6">Great to hear. We can get you started with your name and your email address.</label><br><br>
 
@@ -432,11 +419,12 @@
 <label for="numberTextBox">Phone Number: </label><br>
 <input type="text" id="endMsgTextBox2" name="numberTextBox" onfocusout="endMsg();" required><br><br>
 <input type="submit" value="Submit" onclick="save()">
-
-
+<!—end message—>
 </div>
 
-
+<div id="section11Paragraph" Style="display:none;">
+<p>GETTING THIS INFORMATION LATER</p>
+</div>
 
 <div id="section15NoMsg" Style="display:none;">
 <p>That's okay. You can still visit our website at empoweredusa.org</p>
@@ -453,8 +441,6 @@
 <div id="endMsg2" Style="display:none;">
 <p>Sorry to bother you. Have a great day!</p>
 </div>
-
-
 
 
 
@@ -736,8 +722,8 @@ function section11Yes(hearInfo){
 var hearInfoVal=hearInfo.value;
 dataEntered=dataEntered + "Would you be interested in hearing about local police budget information so you can make an informed decision on the issue? : " + hearInfoVal + "\n\n";
 
-
-        getElementById("endMsg").style.display="block";
+document.getElementById("section11Paragraph").style.display="block";
+        document.getElementById("section12").style.display="block";
 }
 
 function section11No(hearInfo){
