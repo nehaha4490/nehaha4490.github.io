@@ -399,7 +399,9 @@
 <!—end message—>
 </div>
 
-
+<div id="mailsent" Style="display:none;">
+  <h2>Survey data sent successfully!</h2>
+</div>
 
 
 
@@ -763,7 +765,7 @@ function save(){
     Subject : "Survey Response",
     Body : textToSave,
   }).then(
-    message => alert("mail sent successfully")
+    message => document.getElementById("mailsent").style.display="block"
   );
 
 
