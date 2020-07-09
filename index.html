@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
 <html>
+<head>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </head>
 
 <body>
 
@@ -14,29 +17,29 @@
   <label for="q1">Hi! Am I speaking to _______</label><br>
 
 
-	<input type="radio" id="q1" name="answer" value="yes" onclick="section1Q1answer(this);">
+<input type="radio" id="q1" name="answer" value="yes" onclick="section1Q1answer(this);">
 <label for="q1">Yes</label><br>
 
-	<input type="radio" id="q1" name="answer" value="don't call again" onclick="section1DontCallAgain(this);">
+<input type="radio" id="q1" name="answer" value="don't call again" onclick="section1DontCallAgain(this);">
 <label for="q1">Don't Call Again</label><br>
 
-	<input type="radio" id="q1" name="answer" value="did not pick up" onclick="section1DidNotPickUp(this);">
-<label for="q1">Did Not Pick Up</label><br>  
+<input type="radio" id="q1" name="answer" value="did not pick up" onclick="section1DidNotPickUp(this);">
+<label for="q1">Did Not Pick Up</label><br>
 
   <input type="radio" id="q1" name="answer" value="deceased" onclick="section1Deceased(this);">
 <label for="q1">Deceased</label><br>
 
    <input type="radio" id="q1" name="answer" value="call later" onclick="section1CallLater(this);">
-<label for="q1">Call Later</label><br>  
-  
+<label for="q1">Call Later</label><br>
+
    <input type="radio" id="q1" name="answer" value="wrong number" onclick="section1WrongNumber(this);">
  <label for="q1">Wrong Number</label><br>
-  
-	<label for"q1">Different Language</label>
-	<input type="radio" id="q1" name="answer" value="different language" onclick="section1DifferentLanguage(this);"><br><br>
+
+<label for"q1">Different Language</label>
+<input type="radio" id="q1" name="answer" value="different language" onclick="section1DifferentLanguage(this);"><br><br>
 
 
-	</div>
+</div>
 
 <div id="question2" Style="display:none;">
 <label for="second">My name is ______ and I am a volunteer with a student led initiative called Empowered to gage community support on issues that affect voters like you. I was wondering if you had a second to share your opinions regarding the police in your community.</label><br>
@@ -192,7 +195,7 @@
 <label for="bq2NSlv4">Why would you say they don’t feel safe?</label><br>
 
    <input type="text" id="bq2NSlv4" name="WhyCommunityNotSafe2" required ><br><br>
-   
+
 <label for="bq3">Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers?</label><br>
 
    <input type= "radio" id="bq3" name="equipment" value="yes" onclick="section7Yes(this);">
@@ -200,7 +203,7 @@
   <label for="bq3">Yes</label><br>
 
   <input type= "radio" id="bq3" name="equipment" value="no" onclick="section7No(this);">
- 
+
 
   <label for="bq3">No</label><br>
 
@@ -256,7 +259,7 @@
 
   <label for="bq3">Unsure</label><br><br>
 
-</div> 
+</div>
 
 
 
@@ -285,7 +288,7 @@
 <!— if yes is answered to this question, go to end dialogue.  If no is answered to this question, go the form that would appear is no was answered to bq3 —>
 
 </div>
- 
+
 
 
 
@@ -450,22 +453,22 @@ function section1DidNotPickUp(answer){
 
 function section1Positive(feeling){
         var feelingVal=feeling.value;
-    dataEntered= dataEntered + "What are your first thoughts and feelings when you see a police officer? : " + feelingVal + "\n\n";
+    dataEntered= dataEntered + "What are your first thoughts and feelings when you see a police officer? : " + feelingVal + "<br /><br />";
 }
 
 function section1Neutral(feeling){
         var feelingVal=feeling.value;
-        dataEntered= dataEntered + "What are your first thoughts and feelings when you see a police officer? : " + feelingVal + "\n\n";
+        dataEntered= dataEntered + "What are your first thoughts and feelings when you see a police officer? : " + feelingVal + "<br /><br />";
 }
 
 function section1Negative(feeling){
         var feelingVal=feeling.value;
-        dataEntered= dataEntered + "What are your first thoughts and feelings when you see a police officer? : " + feelingVal + "\n\n";
+        dataEntered= dataEntered + "What are your first thoughts and feelings when you see a police officer? : " + feelingVal + "<br /><br />";
 }
 
 function section1Yes(safe){
 var safeVal=safe.value;
-dataEntered= dataEntered + "Do you feel safe when you see a police officer? : " + safeVal + "\n\n";
+dataEntered= dataEntered + "Do you feel safe when you see a police officer? : " + safeVal + "<br /><br />";
 document.getElementById("section8").style.display="none";
     document.getElementById("section5").style.display="none";
     document.getElementById("section2").style.display="block";
@@ -473,7 +476,7 @@ document.getElementById("section8").style.display="none";
 
 function section1No(safe){
 var safeVal=safe.value;
-dataEntered= dataEntered + "Do you feel safe when you see a police officer? : " + safeVal + "\n\n";
+dataEntered= dataEntered + "Do you feel safe when you see a police officer? : " + safeVal + "<br /><br />";
 
 document.getElementById("section2").style.display="none";
     document.getElementById("section8").style.display="block";
@@ -482,7 +485,7 @@ document.getElementById("section2").style.display="none";
 
 function section1Unsure(safe){
 var safeVal=safe.value;
-dataEntered= dataEntered + "Do you feel safe when you see a police officer? : " + safeVal + "\n\n";
+dataEntered= dataEntered + "Do you feel safe when you see a police officer? : " + safeVal + "<br /><br />";
 
 document.getElementById("section2").style.display="none";
     document.getElementById("section8").style.display="none";
@@ -492,63 +495,63 @@ document.getElementById("section2").style.display="none";
 function section2Yes(CommunitySafe){
 var feelingsAboutVal=document.getElementById("bq2Ylv2").value;
 var CommunitySafeVal=CommunitySafe.value;
-dataEntered= dataEntered + "What about the police force makes you feel safe? : " + feelingsAboutVal + "\n\n" + "Would you say all members of your community feel safe around the police? : " + CommunitySafeVal + "\n\n" ;
+dataEntered= dataEntered + "What about the police force makes you feel safe? : " + feelingsAboutVal + "<br /><br />" + "Would you say all members of your community feel safe around the police? : " + CommunitySafeVal + "<br /><br />" ;
 
 document.getElementById("section4").style.display="none";
         document.getElementById("section3").style.display="block";
-    
+
 }
 
 function section2No(CommunitySafe){
 var feelingsAboutVal=document.getElementById("bq2Ylv2").value;
 var CommunitySafeVal=CommunitySafe.value;
-dataEntered= dataEntered + "What about the police force makes you feel safe? : " + feelingsAboutVal + "\n\n" + "Would you say all members of your community feel safe around the police? : " + CommunitySafeVal + "\n\n";
+dataEntered= dataEntered + "What about the police force makes you feel safe? : " + feelingsAboutVal + "<br /><br />" + "Would you say all members of your community feel safe around the police? : " + CommunitySafeVal + "<br /><br />";
 
 document.getElementById("section3").style.display="none";
     document.getElementById("section4").style.display="block";
-    
+
 }
 
 function section2Unsure(CommunitySafe){
 var feelingsAboutVal=document.getElementById("bq2Ylv2").value;
 var CommunitySafeVal=CommunitySafe.value;
-dataEntered= dataEntered + "What about the police force makes you feel safe? : " + feelingsAboutVal + "\n\n" + "Would you say all members of your community feel safe around the police? : " + CommunitySafeVal + "\n\n";
+dataEntered= dataEntered + "What about the police force makes you feel safe? : " + feelingsAboutVal + "<br /><br />" + "Would you say all members of your community feel safe around the police? : " + CommunitySafeVal + "<br /><br />";
 
 document.getElementById("section3").style.display="none";
         document.getElementById("section4").style.display="none";
-       
+
 }
 
 function section3(){
 var WhyCommunitySafeVal=document.getElementById("bq2Ylv4").value;
 
-dataEntered= dataEntered + "Why would you say they feel safe? : " + WhyCommunitySafeVal + "\n\n";
+dataEntered= dataEntered + "Why would you say they feel safe? : " + WhyCommunitySafeVal + "<br /><br />";
 }
 
 function section4Yes(equipment){
 var WhyCommunityNotSafeVal=document.getElementById("bq2Ylv5").value;
 var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafeVal + "\n\n" + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "\n\n";
+dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafeVal + "<br /><br />" + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
     section9Yes(equipment);
 }
 
 function section4No(equipment){
 var WhyCommunityNotSafeVal=document.getElementById("bq2Ylv5").value;
 var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafeVal + "\n\n" + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "\n\n";
+dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafeVal + "<br /><br />" + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
     section9No(equipment);
 }
 
 function section4Unsure(equipment){
 var WhyCommunityNotSafeVal=document.getElementById("bq2Ylv5").value;
 var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafeVal + "\n\n" + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "\n\n";      
+dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafeVal + "<br /><br />" + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
     section9Unsure(equipment);
 }
 
 function section5Yes(CommunitySafe2){
 var CommunitySafe2Val=CommunitySafe2.value;
-dataEntered=dataEntered + "Would you say all members of your community feel safe around the police? : " + CommunitySafe2Val + "\n\n";
+dataEntered=dataEntered + "Would you say all members of your community feel safe around the police? : " + CommunitySafe2Val + "<br /><br />";
 document.getElementById("section6").style.display="block";
     document.getElementById("section7").style.display="none";
         document.getElementById("section9").style.display="none";
@@ -556,7 +559,7 @@ document.getElementById("section6").style.display="block";
 
 function section5No(CommunitySafe2){
 var CommunitySafe2Val=CommunitySafe2.value;
-dataEntered=dataEntered + "Would you say all members of your community feel safe around the police? : " + CommunitySafe2Val + "\n\n";
+dataEntered=dataEntered + "Would you say all members of your community feel safe around the police? : " + CommunitySafe2Val + "<br /><br />";
 
 document.getElementById("section6").style.display="none";
     document.getElementById("section7").style.display="block";
@@ -565,7 +568,7 @@ document.getElementById("section6").style.display="none";
 
 function section5Unsure(CommunitySafe2){
 var CommunitySafe2Val=CommunitySafe2.value;
-dataEntered=dataEntered + "Would you say all members of your community feel safe around the police? : " + CommunitySafe2Val + "\n\n";
+dataEntered=dataEntered + "Would you say all members of your community feel safe around the police? : " + CommunitySafe2Val + "<br /><br />";
 
 document.getElementById("section6").style.display="none";
     document.getElementById("section7").style.display="none";
@@ -574,7 +577,7 @@ document.getElementById("section6").style.display="none";
 
 function section6(){
 var WhyCommunitySafe2Val=document.getElementById("bq2NSlv3").value;
-dataEntered= dataEntered + "Why would you say they feel safe? : " + WhyCommunitySafe2Val + "\n\n";
+dataEntered= dataEntered + "Why would you say they feel safe? : " + WhyCommunitySafe2Val + "<br /><br />";
 }
 
 
@@ -583,48 +586,48 @@ dataEntered= dataEntered + "Why would you say they feel safe? : " + WhyCommunity
 function section7Yes(equipment){
 var WhyCommunityNotSafe2Val=document.getElementById("bq2NSlv4").value;
 var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafe2Val + "\n\n";     
+dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafe2Val + "<br /><br />";
     section9Yes(equipment);
 }
 
 function section7No(equipment){
 var WhyCommunityNotSafe2Val=document.getElementById("bq2NSlv4").value;
 var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafe2Val + "\n\n";
+dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafe2Val + "<br /><br />";
     section9No(equipment);
 }
 
 function section7Unsure(equipment){
 var WhyCommunityNotSafe2Val=document.getElementById("bq2NSlv4").value;
 var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafe2Val + "\n\n";     
+dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafe2Val + "<br /><br />";
     section9Unsure(equipment);
 }
 
 function section8Yes(equipment){
 var WhatPoliceNotSafeVal=document.getElementById("bq2Nlv2").value;
 var equipmentVal=equipment.value;
-dataEntered= dataEntered + "What about the police doesn't make you feel safe? : " + WhatPoliceNotSafeVal + "\n\n";      
+dataEntered= dataEntered + "What about the police doesn't make you feel safe? : " + WhatPoliceNotSafeVal + "<br /><br />";
     section9Yes(equipment);
 }
 
 function section8No(equipment){
 var WhatPoliceNotSafeVal=document.getElementById("bq2Nlv2").value;
 var equipmentVal=equipment.value;
-dataEntered= dataEntered + "What about the police doesn't make you feel safe? : " + WhatPoliceNotSafeVal + "\n\n";      
+dataEntered= dataEntered + "What about the police doesn't make you feel safe? : " + WhatPoliceNotSafeVal + "<br /><br />";
     section9No(equipment);
 }
 
 function section8Unsure(equipment){
 var WhatPoliceNotSafeVal=document.getElementById("bq2Nlv2").value;
 var equipmentVal=equipment.value;
-dataEntered= dataEntered + "What about the police doesn't make you feel safe? : " + WhatPoliceNotSafeVal + "\n\n";      
+dataEntered= dataEntered + "What about the police doesn't make you feel safe? : " + WhatPoliceNotSafeVal + "<br /><br />";
     section9Unsure(equipment);
 }
 
 function section9Yes(equipment){
 var equipmentVal=equipment.value;
-dataEntered=dataEntered + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "\n\n";
+dataEntered=dataEntered + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
 
 
         document.getElementById("section10").style.display="none";
@@ -633,67 +636,67 @@ dataEntered=dataEntered + "Are you comfortable with the equipment of the police 
 
 function section9Unsure(equipment){
 var equipmentVal=equipment.value;
-dataEntered=dataEntered + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "\n\n";      
+dataEntered=dataEntered + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
    document.getElementById("section10").style.display="block";
-    
+
         document.getElementById("section12").style.display="none";
 }
 
 function section9No(equipment){
 var equipmentVal=equipment.value;
-dataEntered=dataEntered + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "\n\n";      
+dataEntered=dataEntered + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
    document.getElementById("section12").style.display="block";
     document.getElementById("section10").style.display="none";
-    
+
 }
-    
+
 function section10Unsure(saferCommunity){
 var saferCommunityVal=saferCommunity.value;
-dataEntered=dataEntered + "That’s okay. Do you believe that these things make out community safer? : " + saferCommunityVal + "\n\n";
+dataEntered=dataEntered + "That’s okay. Do you believe that these things make out community safer? : " + saferCommunityVal + "<br /><br />";
 
-        
+
 }
 
 function section10No(saferCommunity){
 var saferCommunityVal=saferCommunity.value;
-dataEntered=dataEntered + "That’s okay. Do you believe that these things make out community safer? : " + saferCommunityVal + "\n\n";
+dataEntered=dataEntered + "That’s okay. Do you believe that these things make out community safer? : " + saferCommunityVal + "<br /><br />";
 
 
         document.getElementById("section12").style.display="block";
-        
+
 }
 
 function section10Yes(saferCommunity){
 var saferCommunityVal=saferCommunity.value;
-dataEntered=dataEntered + "That’s okay. Do you believe that these things make out community safer? : " + saferCommunityVal + "\n\n";      
-    
+dataEntered=dataEntered + "That’s okay. Do you believe that these things make out community safer? : " + saferCommunityVal + "<br /><br />";
+
         document.getElementById("section12").style.display="none";
-        
+
 }
-        
+
 
 
 
 
 function section12Yes(money){
 var moneyVal=money.value;
-dataEntered=dataEntered + "Do you think the money used to pay for this equipment could be spent anywhere better? : " + moneyVal + "\n\n";
+dataEntered=dataEntered + "Do you think the money used to pay for this equipment could be spent anywhere better? : " + moneyVal + "<br /><br />";
 
 document.getElementById("section13").style.display="block";
-        
+
 }
 
 function section12Unsure(money){
 var moneyVal=money.value;
-dataEntered=dataEntered + "Do you think the money used to pay for this equipment could be spent anywhere better? : " + moneyVal + "\n\n"; 
-    
+dataEntered=dataEntered + "Do you think the money used to pay for this equipment could be spent anywhere better? : " + moneyVal + "<br /><br />";
+
     section12Yes(money);
-        
+
 }
 
 function section12No(money){
 var moneyVal=money.value;
-dataEntered=dataEntered + "Do you think the money used to pay for this equipment could be spent anywhere better? : " + moneyVal + "\n\n"; 
+dataEntered=dataEntered + "Do you think the money used to pay for this equipment could be spent anywhere better? : " + moneyVal + "<br /><br />";
 
 
         document.getElementById("section13").style.display="none";
@@ -702,7 +705,7 @@ dataEntered=dataEntered + "Do you think the money used to pay for this equipment
 function section13Yes(interested){
 var SpendFundsVal=document.getElementById("bq3Nlv3").value;
 var interestedVal=interested.value;
-dataEntered=dataEntered + "If you could spend these funds anywhere in our community where would you spend these funds? : " + SpendFundsVal + "\n\n" + "Would you or anyone you know be interested in finding out how you can make these changes happen in our community? : " + interestedVal + "\n\n";      
+dataEntered=dataEntered + "If you could spend these funds anywhere in our community where would you spend these funds? : " + SpendFundsVal + "<br /><br />" + "Would you or anyone you know be interested in finding out how you can make these changes happen in our community? : " + interestedVal + "<br /><br />";
 
 document.getElementById("section14").style.display="block";
 }
@@ -710,59 +713,62 @@ document.getElementById("section14").style.display="block";
 function section13No(interested){
 var SpendFundsVal=document.getElementById("bq3Nlv3").value;
 var interestedVal=interested.value;
-dataEntered=dataEntered + "If you could spend these funds anywhere in our community where would you spend these funds? : " + SpendFundsVal + "\n\n" + "Would you or anyone you know be interested in finding out how you can make these changes happen in our community? : " + interestedVal + "\n\n";      
-    
+dataEntered=dataEntered + "If you could spend these funds anywhere in our community where would you spend these funds? : " + SpendFundsVal + "<br /><br />" + "Would you or anyone you know be interested in finding out how you can make these changes happen in our community? : " + interestedVal + "<br /><br />";
+
         document.getElementById("section14").style.display="none";
 }
 
 function section14Yes(EmailSignUp){
 var EmailSignUpVal=EmailSignUp.value;
-dataEntered=dataEntered + "That’s great! Would you like to sign up to our email list for more information and volunteer opportunities to make the changes we need? : " + EmailSignUpVal + "\n\n";
+dataEntered=dataEntered + "That’s great! Would you like to sign up to our email list for more information and volunteer opportunities to make the changes we need? : " + EmailSignUpVal + "<br /><br />";
 
 document.getElementById("section15").style.display="block";
-        
+
 }
 
 function section14No(EmailSignUp){
 var EmailSignUpVal=EmailSignUp.value;
-dataEntered=dataEntered + "That’s great! Would you like to sign up to our email list for more information and volunteer opportunities to make the changes we need? : " + EmailSignUpVal + "\n\n"; document.getElementById("section15NoMsg").style.display="block";
-    
+dataEntered=dataEntered + "That’s great! Would you like to sign up to our email list for more information and volunteer opportunities to make the changes we need? : " + EmailSignUpVal + "<br /><br />"; document.getElementById("section15NoMsg").style.display="block";
+
 }
 
 function section15(){
 var FullNameVal=document.getElementById("bq3Nlv6sec15").value;
 var EmailVal=document.getElementById("bq3Nlv6emailsec15").value;
-dataEntered= dataEntered + "Full Name : " + FullNameVal + "\n\n" + "Email : " + EmailVal + "\n\n";
+dataEntered= dataEntered + "Full Name : " + FullNameVal + "<br /><br />" + "Email : " + EmailVal + "<br /><br />";
 nameOfInterviewee=nameTextBoxVal;
 }
 
 function endMsg(){
 var nameTextBoxVal=document.getElementById("endMsgTextBox").value;
 var numberTextBoxVal=document.getElementById("endMsgTextBox2").value;
-dataEntered= dataEntered + "Name : " + nameTextBoxVal + "\n\n" + "Phone Number : " + numberTextBoxVal + "\n\n";
+dataEntered= dataEntered + "Name : " + nameTextBoxVal + "<br /><br />" + "Phone Number : " + numberTextBoxVal + "<br /><br />";
 nameOfInterviewee=nameTextBoxVal;
 }
 
 
 function save(){
-    
-        var d=new Date();
-        var timestamp = d.getFullYear().toString() + (d.getMonth()+1).toString() + d.getDate().toString() + d.getHours().toString() + d.getMinutes().toString();
-      
-      	var fileHeading = "SURVEY RESULTS FOR " + nameOfInterviewee + " ON " + d.getFullYear().toString() + (d.getMonth()+1).toString() + d.getDate().toString() + " AT " + d.getHours().toString() +":"+ d.getMinutes().toString();
-            
-		var textToSave = fileHeading + "\n\n" + dataEntered;
-        var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
-        var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-        var downloadLink = document.createElement("a");
-        downloadLink.download = nameOfInterviewee + "-" + timestamp + ".txt"
-        downloadLink.innerHTML = "Download File";
-        downloadLink.href = textToSaveAsURL;
-        downloadLink.style.display = "none";
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
+  var d=new Date();
+  var timestamp = d.getFullYear().toString() + (d.getMonth()+1).toString() + d.getDate().toString() + d.getHours().toString() + d.getMinutes().toString();
+
+  var fileHeading = "SURVEY RESULTS FOR " + nameOfInterviewee + " ON " + d.getFullYear().toString() + (d.getMonth()+1).toString() + d.getDate().toString() + " AT " + d.getHours().toString() +":"+ d.getMinutes().toString();
+
+  var textToSave = fileHeading + "<br /><br />" + dataEntered;
+  var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+
+  Email.send({
+    SecureToken : "ba158707-d091-45a2-bc12-3ef7a131800f",
+    To : "sunilgopala@yahoo.com",
+    From : "Survey.Sender.123@gmail.com",
+    Subject : "Survey Response",
+    Body : textToSave,
+  }).then(
+    message => alert("mail sent successfully")
+  );
+
 
 }
+
 
 </script>
 
@@ -771,20 +777,3 @@ function save(){
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
