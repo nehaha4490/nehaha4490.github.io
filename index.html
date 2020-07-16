@@ -772,8 +772,9 @@ function save(){
 
 }
 function clearpage(){
+  window.parent.focus();
   window.parent.alert("Data Sent Successfully!");
-  location.reload();
+  window.parent.location.reload();
 }
 
 
