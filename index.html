@@ -13,6 +13,12 @@
 
 <form action="/action_page.php">
 
+<label for="endMsgTextBox">Name: </label><br>
+        <input type="text" id="endMsgTextBox" name="nameTextBox" required><br>
+
+<label for="numberTextBox">Phone Number: </label><br>
+<input type="text" id="endMsgTextBox2" name="numberTextBox" onfocusout="endMsg();" required><br><br>
+
 <div id="question1">
   <label for="q1">Hi! Am I speaking to _______</label><br>
 
@@ -33,7 +39,7 @@
 <label for="q1">Call Later</label><br>
 
    <input type="radio" id="q1" name="answer" value="wrong number" onclick="section1WrongNumber(this);">
- <label for="q1">Wrong Number</label><br>
+ <label for="q1">Wrong Number</label><br><br>
 
 
 
@@ -389,11 +395,7 @@
 
 <p>Thank you for taking the time to answer our community survey. Have a great day!</p>
 
-<label for="endMsgTextBox">Name: </label><br>
-        <input type="text" id="endMsgTextBox" name="nameTextBox" required><br>
 
-<label for="numberTextBox">Phone Number: </label><br>
-<input type="text" id="endMsgTextBox2" name="numberTextBox" onfocusout="endMsg();" required><br><br>
 <input type="submit" value="Submit" onclick="save()">
 <!—end message—>
 </div>
@@ -759,7 +761,7 @@ function save(){
 
   Email.send({
     SecureToken : "ba158707-d091-45a2-bc12-3ef7a131800f",
-    To : "benrmaier@gmail.com",
+    To : "crystalwater4490@gmail.com",
     From : "Survey.Sender.123@gmail.com",
     Subject : "Survey Response",
     Body : textToSave,
