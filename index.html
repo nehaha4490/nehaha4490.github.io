@@ -123,7 +123,7 @@
 <div id="section3" Style="display:none;">
 <!—this question will appear if they answered yes to the previous form. Goes to the end dialogue after question is answered>
 
-<label for="bq2Ylv4">Why would you say they feel safe?</label><br>
+<label for="bq2Ylv4">3Why would you say they feel safe?</label><br>
         <input type="text" id="bq2Ylv4" name="WhyCommunitySafe" required><br><br><br>
 
 </div>
@@ -186,7 +186,7 @@
 
 <!— this question will appear if they answered yes to question bq2NSlv2 . Cuts to end dialogue after this question appears —>
 
-<label for="bq2NSlv3">Why would you say they feel safe?</label><br>
+<label for="bq2NSlv3">6Why would you say they feel safe?</label><br>
 
    <input type="text" id="bq2NSlv3" name="WhyCommunitySafe2" onfocusout="section6();" required><br><br>
 </div>
@@ -528,7 +528,7 @@ document.getElementById("section3").style.display="none";
 function section3(){
 var WhyCommunitySafeVal=document.getElementById("bq2Ylv4").value;
 
-dataEntered= dataEntered + "rererWhy would you say they feel safe? : " + WhyCommunitySafeVal + "<br /><br />";
+dataEntered= dataEntered + "Why would you say they feel safe? : " + WhyCommunitySafeVal + "<br /><br />";
 }
 
 function section4Yes(equipment){
