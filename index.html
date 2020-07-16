@@ -396,7 +396,10 @@
 <p>Thank you for taking the time to answer our community survey. Have a great day!</p>
 
 
-<input type="submit" value="Submit" onclick="save()">
+<input type="submit" value="Submit" onclick="save()" >
+<br /><br /><span style="color:red">* Note: </span>
+<span>Once you press Submit, the survey data will be emailed to Ben. The page will reload automatically and it will be ready for the next call.
+</span>
 <!—end message—>
 </div>
 
@@ -772,8 +775,7 @@ function save(){
 
 }
 function clearpage(){
-  alert("Data sent successfully");
- 
+  location.reload();
 }
 
 
