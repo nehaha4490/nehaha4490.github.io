@@ -123,8 +123,8 @@
 <div id="section3" Style="display:none;">
 <!—this question will appear if they answered yes to the previous form. Goes to the end dialogue after question is answered>
 
-<label for="bq2Ylv4">3Why would you say they feel safe?</label><br>
-        <input type="text" id="bq2Ylv4" name="WhyCommunitySafe" required><br><br><br>
+<label for="bq2Ylv4">Why would you say they feel safe?</label><br>
+        <input type="text" id="bq2Ylv4" name="WhyCommunitySafe" onfocusout="section3(this);" required><br><br><br>
 
 </div>
 
@@ -186,7 +186,7 @@
 
 <!— this question will appear if they answered yes to question bq2NSlv2 . Cuts to end dialogue after this question appears —>
 
-<label for="bq2NSlv3">6Why would you say they feel safe?</label><br>
+<label for="bq2NSlv3">Why would you say they feel safe?</label><br>
 
    <input type="text" id="bq2NSlv3" name="WhyCommunitySafe2" onfocusout="section6();" required><br><br>
 </div>
@@ -739,7 +739,7 @@ function section15(){
 var FullNameVal=document.getElementById("bq3Nlv6sec15").value;
 var EmailVal=document.getElementById("bq3Nlv6emailsec15").value;
 dataEntered= dataEntered + "Full Name : " + FullNameVal + "<br /><br />" + "Email : " + EmailVal + "<br /><br />";
-nameOfInterviewee=nameTextBoxVal;
+
 }
 
 function endMsg(){
@@ -758,18 +758,22 @@ function save(){
 
   var textToSave = fileHeading + "<br /><br />" + dataEntered;
   var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
-
+  dataEntered="";
   Email.send({
     SecureToken : "ba158707-d091-45a2-bc12-3ef7a131800f",
-    To : "crystalwater4490@gmail.com",
+    To : "sunilgopala@yahoo.com",
     From : "Survey.Sender.123@gmail.com",
     Subject : "Survey Response",
     Body : textToSave,
   }).then(
-    message => document.getElementById("mailsent").style.display="block"
+    message => clearpage()
   );
 
 
+}
+function clearpage(){
+  alert("Data Sent Successfully!");
+  location.reload();
 }
 
 
