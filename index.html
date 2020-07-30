@@ -47,7 +47,7 @@
 </div>
 
 <div id="question2" Style="display:none;">
-<label for="second">My name is ______ and I am a volunteer with a student led initiative called Empowered to gage community support on issues that affect voters like you. I was wondering if you had a second to share your opinions regarding the police in your community.</label><br>
+<label for="second">My name is ______ and I am a volunteer with a student led initiative called Empowered to gage community support on issues that affect voters like you. I was wondering if you had a second to share your anonymous opinions regarding the police in your community.</label><br>
 
 <input type="radio" id="second" name="opinion" value="yes" onclick="question2(this);">
 
@@ -61,330 +61,227 @@
 
 <div id="section1" Style="display:none;">
 
-  <label for="bq1">What are your first thoughts and feelings when you see a police officer?</label><br>
+  <label for="bq1">Did you or anyone you know go to a school with a law enforcement officer on campus?</label><br>
 
-   <input type="radio" id="bq1" name="feeling" value="positive" onclick="section1Positive(this);">
+   <input type="radio" id="bq1" name="LawEnforcementOnCampus" value="yes" onclick="section1Yes(this);">
 
-  <label for="bq1">Positive</label><br>
+  <label for="bq1">Yes</label><br>
 
-  <input type="radio" id="bq1" name="feeling" value="neutral" onclick="section1Neutral(this);">
+  <input type="radio" id="bq1" name="LawEnforcementOnCampus" value="unsure" onclick="section1Unsure(this);">
 
-  <label for="bq1">Neutral</label><br>
+  <label for="bq1">Unsure</label><br>
 
-  <input type="radio" id="bq1" name="feeling" value="negative" onclick="section1Negative(this);">
+  <input type="radio" id="bq1" name="LawEnforcementOnCampus" value="no" onclick="section1No(this);">
 
-  <label for="bq1">Negative</label><br><br>
-
-
-
- <label for="bq2">Do you feel safe when you see a police officer?</label><br>
-
-   <input type="radio" id="bq2" name="safe" value="yes" onclick="section1Yes(this);">
-
-  <label for="bq2">Yes</label><br>
-
-  <input type="radio" id="bq2" name="safe" value="no" onclick="section1No(this);">
-
-  <label for="bq2">No</label><br>
-
-  <input type="radio" id="bq2" name="safe" value="unsure" onclick="section1Unsure(this);">
-
-  <label for="bq2">Unsure</label><br><br>
+  <label for="bq1">No</label><br><br>
 </div>
-
-
-
+ 
 
 <div id="section2" Style="display:none;">
-<!— first new form if they answered yes to base question 2 —>
 
-<label for="bq2Ylv2">What about the police force makes you feel safe?</label><br>
-   <input type="text" id="bq2Ylv2" name="feelingsAbout" required ><br><br>
+  
+ <label for="bq1YLv1">How did the officer on campus change the school experience for you?</label><br>
 
-<label for="bq2Ylv3">Would you say all members of your community feel safe around the police?</label><br>
+   <input type="radio" id="bq1YLv1" name="OfficerCampusChange" value="positive" onclick="section2Positive(this);">
 
-  <input type="radio" id="bq2Ylv3" name="CommunitySafe" value="yes" onclick="section2Yes(this);">
+  <label for="bq1YLv1">Positive</label><br>
 
-  <label for="bq2Ylv3">Yes</label><br>
+  <input type="radio" id="bq1YLv1" name="OfficerCampusChange" value="unsure" onclick="section2Unsure(this);">
 
-  <input type="radio" id="bq2Ylv3" name="CommunitySafe" value="no" onclick="section2No(this);">
+  <label for="bq1YLv1">Unsure</label><br>
 
-  <label for="bq2Ylv3">No</label><br>
+  <input type="radio" id="bq1YLv1" name="OfficerCampusChange" value="negative" onclick="section2Negative(this);">
 
-  <input type="radio" id="bq2Ylv3" name="CommunitySafe" value="unsure" onclick="section2Unsure(this);">
-
-  <label for="bq2Ylv3">Unsure</label><br><br>
+  <label for="bq1YLv1">Negative</label><br><br>
 </div>
 
-
-
-
-
-<div id="section3" Style="display:none;">
-<!—this question will appear if they answered yes to the previous form. Goes to the end dialogue after question is answered>
-
-<label for="bq2Ylv4">Why would you say they feel safe?</label><br>
-        <input type="text" id="bq2Ylv4" name="WhyCommunitySafe" onfocusout="section3(this);" required><br><br><br>
-
-</div>
-
-
-
-<div id="section4" Style="display:none;">
-
-<!— this question will appear if they answered no to question bq2Ylv3. This question will go to base question 3 after being submitted —>
-
-<label for="bq2Ylv5">Why would you say they don’t feel safe?</label><br>
-
-   <input type="text" id="bq2Ylv5" name="WhyCommunityNotSafe" required><br><br>
-
-<label for="bq3">Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers?</label><br>
-
-   <input type="radio" id="bq3" name="equipment" value="yes" onclick="section4Yes(this);">
-
-  <label for="bq3">Yes</label><br>
-
-  <input type="radio" id="bq3" name="equipment" value="no" onclick="section4No(this);">
-
-  <label for="bq3">No</label><br>
-
-  <input type="radio" id="bq3" name="equipment" value="unsure" onclick="section4Unsure(this);">
-
-  <label for="bq3">Unsure</label><br><br>
-
-</div>
-
-
-
-<!— if answer is unsure then go straight to end dialogue —>
-
-
-
-<div id="section5" Style="display:none;">
-
-<!— this form is for the answer unsure for base question 2 —>
-
-<label for="bq2NSlv2">Would you say all members of your community feel safe around the police?</label><br>
-
-   <input type="radio" id="bq2NSlv2" name="CommunitySafe2" value="yes" onclick="section5Yes(this);">
-
-  <label for="bq2NSlv2">Yes</label><br>
-
-  <input type="radio" id="bq2NSlv2" name="CommunitySafe2" value="yes" onclick="section5No(this);">
-
-  <label for="bq2NSlv2">No</label><br>
-
- <input type="radio" id="bq2NSlv2" name="CommunitySafe2" value="yes" onclick="section5Unsure(this);">
-
-  <label for="bq2NSlv2">Unsure</label><br><br>
-
-</div>
-
-
-
-<div id="section6" Style="display:none;">
-
-<!— this question will appear if they answered yes to question bq2NSlv2 . Cuts to end dialogue after this question appears —>
-
-<label for="bq2NSlv3">Why would you say they feel safe?</label><br>
-
-   <input type="text" id="bq2NSlv3" name="WhyCommunitySafe2" onfocusout="section6();" required><br><br>
-</div>
-
-
-
-<div id="section7" Style="display:none;">
-
-<!— this question will appear if they answered no to question bq2NSlv2. Goes to base question 3 after this question appears —>
-
-<label for="bq2NSlv4">Why would you say they don’t feel safe?</label><br>
-
-   <input type="text" id="bq2NSlv4" name="WhyCommunityNotSafe2" required ><br><br>
-
-<label for="bq3">Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers?</label><br>
-
-   <input type= "radio" id="bq3" name="equipment" value="yes" onclick="section7Yes(this);">
-
-  <label for="bq3">Yes</label><br>
-
-  <input type= "radio" id="bq3" name="equipment" value="no" onclick="section7No(this);">
-
-
-  <label for="bq3">No</label><br>
-
-   <input type= "radio" id="bq3" name="equipment" value="unsure" onclick="section7Unsure(this);">
-
-  <label for="bq3">Unsure</label><br><br>
-</div>
-
-
-
-<div id="section8" Style="display:none;">
-
-<!— this question will appear if they answered no to the base question 2. Goes to base question 3 after this question appears —>
-
-<label for="bq2Nlv2">What about the police doesn’t make you feel safe?</label><br>
-
-   <input type="text" id="bq2Nlv2" name="WhatPoliceNotSafe" required><br><br>
-<label for="bq3">Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers?</label><br>
-
-   <input type= "radio" id="bq3" name="equipment" value="yes" onclick="section8Yes(this);">
-
-  <label for="bq3">Yes</label><br>
-
-  <input type= "radio" id="bq3" name="equipment" value="no" onclick="section8No(this);">
-
-  <label for="bq3">No</label><br>
-
-  <input type= "radio" id="bq3" name="equipment" value="unsure" onclick="section8Unsure(this);">
-
-  <label for="bq3">Unsure</label><br><br>
-
-<!— this question will appear if they answered no to the base question 2. Goes to base question 3 after this question appears —>
-</div>
-
-
-
+  
 
 
 
 <div id="section9" Style="display:none;">
 
-<label for="bq3">Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers?</label><br>
+<label for="bq1YLv8">What specifically about the campus officers made your campus experience like this?</label><br>
+        <input type="text" id="bq1YLv8" name="CampusExperience" onfocusout="section9();" required><br><br>
 
-   <input type="radio" id="bq3" name="equipment" value="yes" onclick="section9Yes(this);">
+  <label for="bq1YLv4">Do you believe that police officers should be present on school campuses if they have a negative impact on the student body?</label><br>
 
-  <label for="bq3">Yes</label><br>
+   <input type="radio" id="bq1YLv4" name="ImpactOnStudentBody" value="yes" onclick="section5Yes(this);">
 
-<input type="radio" id="bq3" name="equipment" value="no" onclick="section9No(this);">
+  <label for="bq1YLv4">Yes</label><br>
 
-  <label for="bq3">No</label><br>
+  <input type="radio" id="bq1YLv4" name="ImpactOnStudentBody" value="no" onclick="section5No(this);">
 
-<input type="radio" id="bq3" name="equipment" value="unsure" onclick="section9Unsure(this);">
-
-  <label for="bq3">Unsure</label><br><br>
-
-</div>
-
-
-
-<!— if yes is answered to bq3, cut to end dialogue. —>
-
-
-
-<div id="section10" Style="display:none;">
-
-<!— this question will appear if unsure is answered to bq3. —>
-
-<label for="bq3NSlv2">That’s okay. Do you believe that these things make out community safer?</label><br>
-
-   <input type="radio" id="bq3NSlv2" name="saferCommunity" value="yes" onclick="section10Yes(this);">
-
-  <label for="bq3NSlv2">Yes</label><br>
-
-  <input type="radio" id="bq3NSlv2" name="saferCommunity" value="no" onclick="section10No(this);">
-
-  <label for="bq3NSlv2">No</label><br>
-
-  <input type="radio" id="bq3NSlv2" name="saferCommunity" value="unsure" onclick="section10Unsure(this);">
-
-  <label for="bq3NSlv2">Unsure</label><br><br>
-
-<!— if yes is answered to this question, go to end dialogue.  If no is answered to this question, go the form that would appear is no was answered to bq3 —>
+  <label for="bq1YLv4">No</label><br><br>
 
 </div>
 
 
+<div id="section10" Style="display:none;">  
+  <label for="bq1NLv1">If there was a police officer on campus, do you think that would have changed the school experience for you and the people you know?</label><br>
+
+   <input type="radio" id="bq1NLv1" name="PoliceChangeCampus" value="positive" onclick="section10Positive(this);">
+
+  <label for="bq1NLv1">Yes</label><br>
+
+<input type="radio" id="bq1NLv1" name="PoliceChangeCampus" value="unsure" onclick="section10Unsure(this);">
+
+  <label for="bq1NLv1">Unsure</label><br>
+  
+  <input type="radio" id="bq1YLv5" name="PoliceChangeCampus" value="negative" onclick="section10Negative(this);">
+
+  <label for="bq1NLv1">Negative</label><br><br>
+</div>
 
 
+<div id="section11" Style="display:none;">
 
+<label for="bq1NLv2">What specifically about a police presence on campus would’ve made your experience like this?</label><br>
+        <input type="text" id="bq1NLv2" name="PolicePresenceCampusExperience" onfocusout="section11();" required><br><br>
 
+  <label for="bq1YLv4">Do you believe that police officers should be present on school campuses if they have a negative impact on the student body?</label><br>
 
+   <input type="radio" id="bq1YLv4" name="ImpactOnStudentBody" value="yes" onclick="section5Yes(this);">
+
+  <label for="bq1YLv4">Yes</label><br>
+
+  <input type="radio" id="bq1YLv4" name="ImpactOnStudentBody" value="no" onclick="section5No(this);">
+
+  <label for="bq1YLv4">No</label><br><br>
+</div>
+
+<div id="section3" Style="display:none;">  
+  <label for="bq1YLv2">That's okay. Would you like to hear a story from a California student about their experiences with officers in schools?</label><br>
+
+   <input type="radio" id="bq1YLv2" name="Story" value="yes" onclick="section3Yes(this);">
+
+  <label for="bq1YLv2">Yes</label><br>
+
+  <input type="radio" id="bq1YLv2" name="Story" value="no" onclick="section3No(this);">
+
+  <label for="bq1YLv2">No</label><br><br>
+</div>
+
+<div id="section4" Style="display:none;">  
+  <label for="bq1YLv3">Great! This following story was from an LA Times Article about a high school in Southern California. The police on campus were officially referred to as “school resource officers” just for clarification. After an altercation between two students broke out into a fight, the school resource officers went to the scene to stop it. However, the campus officers quickly turned the two person incident into a brawl after using pepper spray to diffuse the situation. The pepper spray was used on nearly 30 other students, mostly bystanders. Eight students were eventually detained and one had to be taken to the hospital.<br><br>
+Do you think that this behavior from officers should be condoned in schools?</label><br>
+
+   <input type="radio" id="bq1YLv3" name="StoryQ" value="yes" onclick="section4Yes(this);">
+
+  <label for="bq1YLv3">Yes</label><br>
+   
+   <input type="radio" id="bq1YLv3" name="StoryQ" value="unsure" onclick="section4Unsure(this);">
+
+  <label for="bq1YLv3">Unsure</label><br>
+  
+  <input type="radio" id="bq1YLv3" name="StoryQ" value="no" onclick="section4No(this);">
+
+  <label for="bq1YLv3">No</label><br><br>
+</div>
+
+<div id="section5" Style="display:none;">  
+  <label for="bq1YLv4">Do you believe that police officers should be present on school campuses if they have a negative impact on the student body?</label><br>
+
+   <input type="radio" id="bq1YLv4" name="ImpactOnStudentBody" value="yes" onclick="section5Yes(this);">
+
+  <label for="bq1YLv4">Yes</label><br>
+
+  <input type="radio" id="bq1YLv4" name="ImpactOnStudentBody" value="no" onclick="section5No(this);">
+
+  <label for="bq1YLv4">No</label><br><br>
+</div>
+
+<div id="section6" Style="display:none;">  
+  <label for="bq1YLv5">Would you like to hear how you can make this possible  in your community and California?</label><br>
+
+   <input type="radio" id="bq1YLv5" name="HowPossible" value="yes" onclick="section6Yes(this);">
+
+  <label for="bq1YLv5">Yes</label><br>
+
+  <input type="radio" id="bq1YLv5" name="HowPossible" value="no" onclick="section6No(this);">
+
+  <label for="bq1YLv5">No</label><br><br>
+</div>
+
+<div id="section7" Style="display:none;">  
+  <label for="bq1YLv6">Would you be interested in signing up for an informational newsletter related to empowering and protecting our students and also hear about volunteer opportunities?</label><br>
+
+   <input type="radio" id="bq1YLv6" name="InterestedNewsletter" value="yes" onclick="section7Yes(this);">
+
+  <label for="bq1YLv6">Yes</label><br>
+
+  <input type="radio" id="bq1YLv6" name="InterestedNewsletter" value="no" onclick="section7No(this);">
+
+  <label for="bq1YLv6">No</label><br><br>
+</div>
+
+<div id="sec7siteMsg" Style="display:none;">
+<p>That's okay. You can still visit our website at empoweredusa.org. Thank you for taking the time to complete our survey! Have a great day!<p>
+</div>
+
+<div id="section8" Style="display:none;">
+<label for="bq1Ylv7">Great! Can I get your email address?</label><br><br>
+
+<label for="bq1Ylv7Email">Email: </label><br>
+<input type="text" id="bq1Ylv7Email" name="Email" onfocusout="section8();" required><br><br>
+
+<label for="ending">Thank you for your time. Just one more question, are you registered to vote?</label><br>
+
+   <input type="radio" id="ending" name="RegisteredToVote" value="yes" onclick="endMsg1Yes(this);">
+
+  <label for="ending">Yes</label><br>
+
+<input type="radio" id="ending" name="RegisteredToVote" value="no" onclick="endMsg1No(this);">
+  <label for="ending">No</label><br><br>
+
+</div>
+
+<div id="endMsg1" Style="display:none;">
+<label for="ending">Thank you for your time. Just one more question, are you registered to vote?</label><br>
+
+   <input type="radio" id="ending" name="RegisteredToVote" value="yes" onclick="endMsg1Yes(this);">
+
+  <label for="ending">Yes</label><br>
+
+<input type="radio" id="ending" name="RegisteredToVote" value="no" onclick="endMsg1No(this);">
+  <label for="ending">No</label><br><br>
+</div>
 
 <div id="section12" Style="display:none;">
+<label for="sec12">Are you planning to vote this November?</label><br>
 
-<!— this form will appear if no is answered to bq3. —>
+   <input type="radio" id="sec12" name="PlanningToVote" value="yes" onclick="section12Yes(this);">
 
-<label for="bq3Nlv2">Do you think the money used to pay for this equipment could be spent anywhere better?</label><br>
+  <label for="sec12">Yes</label><br>
 
-   <input type="radio" id="bq3Nlv2" name="money" value="yes" onclick="section12Yes(this);">
-
-  <label for="bq3Nlv2">Yes</label><br>
-
-  <input type="radio" id="bq3Nlv2"name="money" value="no" onclick="section12No(this);">
-
-  <label for="bq3Nlv2">No</label><br>
-
-  <input type="radio" id="bq3Nlv2" name="money" value="unsure" onclick="section12Unsure(this);">
-
-  <label for="bq3Nlv2">Unsure</label><br><br>
-
-<!— if no is answered to this question, cut to end dialogue. If unsure is answered to this question, go to bq3Nlv3  —>
-
+<input type="radio" id="sec12" name="PlanningToVote" value="no" onclick="section12No(this);">
+  <label for="sec12">No</label><br>
 </div>
 
+<div id="sec12Msg1" Style="display:none;">
+<br><p>That’s awesome to hear! I hope you have a great day today and thanks again for taking the time to answer our survey!</p><br>
+</div>
+
+<div id="sec12Msg2" Style="display:none;">
+<br><p>That’s okay just remember that it’s important that all our voices are heard this election. Thank you again for answering our survey and have a great day!</p><br>
+</div>
 
 
 <div id="section13" Style="display:none;">
+<label for="sec13">Would you like information on how to register to vote?</label><br>
 
-<!— this form will appear if yes is answered to question bq3Nlv2 —>
+   <input type="radio" id="sec13" name="InformationOnRegistering" value="yes" onclick="section13Yes(this);">
 
-<label for="bq3Nlv3">If you could spend these funds anywhere in our community where would you spend these funds?</label><br>
+  <label for="sec13">Yes</label><br>
 
-   <input type="text" id="bq3Nlv3" name="SpendFunds"><br><br>
-
-
-
-<label for="bq3Nlv4">Would you or anyone you know be interested in finding out how you can make these changes happen in our community?</label><br>
-
-   <input type="radio" id="bq3Nlv4" name="interested" value="yes" onclick="section13Yes(this);" required>
-
-  <label for="bq3Nlv4">Yes</label><br>
-
-  <input type="radio" id="bq3Nlv4" name="interested" value="no" onclick="section13No(this);" required>
-
-  <label for="bq3Nlv4">No</label><br><br>
-
-<!—if no is answered to this question, cut to end dialogue. —>
+<input type="radio" id="sec13" name="InformationOnRegistering" value="no" onclick="section13No(this);">
+  <label for="sec13">No</label><br>
 </div>
 
-
-
-<div id="section14" Style="display:none;">
-
-<!— this question will appear if yes is answered to question bq3Nlv4. If no, display a certain message before showing end dialogue —>
-
-<label for="bq3Nlv5">That’s great! Would you like to sign up to our email list for more information and volunteer opportunities to make the changes we need?</label><br>
-
-   <input type="radio" id="bq3Nlv5" name="EmailSignUp" value="yes" onclick="section14Yes(this);" required>
-
-  <label for="bq3Nlv5">Yes</label><br>
-
-  <input type="radio" id="bq3Nlv5" name="EmailSignUp" value="no" onclick="section14No(this);" required>
-
-  <label for="bq3Nlv5">No</label><br><br>
-
+<div id="sec13Msg" Style="display:none;">
+<br><p>Great! You can go to the California Secretary of State’s website to register online today. It should only take a few minutes but will have a monumental impact on this election. (wait for response if needed). Thank you again for taking the time to answer our survey and have a great time.</p><br>
 </div>
 
-
-
-<div id="section15" Style="display:none;">
-
-<!— this question will appear if yes was answered to the email question bq3Nlv5. —>
-
-<label for="bq3Nlv6">Great to hear. We can get you started with your name and your email address.</label><br><br>
-
-<label for="bq3Nlv6sec15">Full Name: </label><br>
-<input type="text" id="bq3Nlv6sec15" name="FullName" required><br>
-
-<label for="bq3Nlv6emailsec15">Email: </label><br>
-<input type="text" id="bq3Nlv6emailsec15" name="Email" onfocusout="section15();" required><br><br>
-
-</div>
-
-<div id="section15NoMsg" Style="display:none;">
-<p>That's okay. You can still visit our website at empoweredusa.org</p>
-</div>
 
 <div id="endMsg2" Style="display:none;">
 <p>Sorry to bother you. Have a great day!</p>
@@ -392,20 +289,14 @@
 
 
 <div id="endMsg" Style="display:block;">
-
-<p>Thank you for taking the time to answer our community survey. Have a great day!</p>
-
-
-<input type="submit" value="Submit" onclick="save()" >
+<br><input type="submit" value="Submit" onclick="save()" >
 <br /><br /><span style="color:red">* Note: </span>
 <span>Once you press Submit, the survey data will be emailed to Ben. The page will reload automatically and it will be ready for the next call.
 </span>
 <!—end message—>
 </div>
 
-<div id="mailsent" Style="display:none;">
-  <h2>Survey data sent successfully!</h2>
-</div>
+
 
 
 
@@ -454,295 +345,157 @@ function section1DifferentLanguage(answer){
 }
 
 function section1DidNotPickUp(answer){
-        document.getElementById("endMsg").style.display="block";
+        document.getElementById("endMsg2").style.display="block";
 }
 
-function section1Positive(feeling){
-        var feelingVal=feeling.value;
-    dataEntered= dataEntered + "What are your first thoughts and feelings when you see a police officer? : " + feelingVal + "<br /><br />";
+function section1Yes(LawEnforcementOnCampus){
+   document.getElementById("section2").style.display="block";
 }
 
-function section1Neutral(feeling){
-        var feelingVal=feeling.value;
-        dataEntered= dataEntered + "What are your first thoughts and feelings when you see a police officer? : " + feelingVal + "<br /><br />";
-}
-
-function section1Negative(feeling){
-        var feelingVal=feeling.value;
-        dataEntered= dataEntered + "What are your first thoughts and feelings when you see a police officer? : " + feelingVal + "<br /><br />";
-}
-
-function section1Yes(safe){
-var safeVal=safe.value;
-dataEntered= dataEntered + "Do you feel safe when you see a police officer? : " + safeVal + "<br /><br />";
-document.getElementById("section8").style.display="none";
-    document.getElementById("section5").style.display="none";
-    document.getElementById("section2").style.display="block";
-}
-
-function section1No(safe){
-var safeVal=safe.value;
-dataEntered= dataEntered + "Do you feel safe when you see a police officer? : " + safeVal + "<br /><br />";
-
+function section1Unsure(LawEnforcementOnCampus){  document.getElementById("section10").style.display="block";
 document.getElementById("section2").style.display="none";
-    document.getElementById("section8").style.display="block";
-    document.getElementById("section5").style.display="none";
 }
 
-function section1Unsure(safe){
-var safeVal=safe.value;
-dataEntered= dataEntered + "Do you feel safe when you see a police officer? : " + safeVal + "<br /><br />";
-
+function section1No(LawEnforcementOnCampus){
+document.getElementById("section10").style.display="block";
 document.getElementById("section2").style.display="none";
-    document.getElementById("section8").style.display="none";
-    document.getElementById("section5").style.display="block";
 }
 
-function section2Yes(CommunitySafe){
-var feelingsAboutVal=document.getElementById("bq2Ylv2").value;
-var CommunitySafeVal=CommunitySafe.value;
-dataEntered= dataEntered + "What about the police force makes you feel safe? : " + feelingsAboutVal + "<br /><br />" + "Would you say all members of your community feel safe around the police? : " + CommunitySafeVal + "<br /><br />" ;
+function section2Positive(OfficerCampusChange){
+document.getElementById("endMsg1").style.display="block";
+document.getElementById("section3").style.display="none";
+document.getElementById("section9").style.display="none";
+}
 
+function section2Unsure(OfficerCampusChange){
+document.getElementById("section3").style.display="block";
+document.getElementById("endMsg1").style.display="none";
+document.getElementById("section9").style.display="none";
+}
+
+function section2Negative(OfficerCampusChange){
+
+document.getElementById("section9").style.display="block";
+document.getElementById("endMsg1").style.display="none";
+document.getElementById("section3").style.display="none";
+}
+
+function section3Yes(Story){
+document.getElementById("section4").style.display="block";
+document.getElementById("endMsg1").style.display="none";
+}
+
+function section3No(Story){
+document.getElementById("endMsg1").style.display="block";
 document.getElementById("section4").style.display="none";
-        document.getElementById("section3").style.display="block";
-
 }
 
-function section2No(CommunitySafe){
-var feelingsAboutVal=document.getElementById("bq2Ylv2").value;
-var CommunitySafeVal=CommunitySafe.value;
-dataEntered= dataEntered + "What about the police force makes you feel safe? : " + feelingsAboutVal + "<br /><br />" + "Would you say all members of your community feel safe around the police? : " + CommunitySafeVal + "<br /><br />";
+function section4Yes(StoryQ){
 
-document.getElementById("section3").style.display="none";
-    document.getElementById("section4").style.display="block";
-
+document.getElementById("endMsg1").style.display="block";
+document.getElementById("section5").style.display="none";
 }
 
-function section2Unsure(CommunitySafe){
-var feelingsAboutVal=document.getElementById("bq2Ylv2").value;
-var CommunitySafeVal=CommunitySafe.value;
-dataEntered= dataEntered + "What about the police force makes you feel safe? : " + feelingsAboutVal + "<br /><br />" + "Would you say all members of your community feel safe around the police? : " + CommunitySafeVal + "<br /><br />";
-
-document.getElementById("section3").style.display="none";
-        document.getElementById("section4").style.display="none";
-
+function section4Unsure(StoryQ){
+document.getElementById("endMsg1").style.display="block";
+document.getElementById("section5").style.display="none";
 }
 
-function section3(){
-var WhyCommunitySafeVal=document.getElementById("bq2Ylv4").value;
-
-dataEntered= dataEntered + "Why would you say they feel safe? : " + WhyCommunitySafeVal + "<br /><br />";
+function section4No(StoryQ){
+document.getElementById("section5").style.display="block";
+document.getElementById("endMsg1").style.display="none";
 }
 
-function section4Yes(equipment){
-var WhyCommunityNotSafeVal=document.getElementById("bq2Ylv5").value;
-var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafeVal + "<br /><br />" + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
-    section9Yes(equipment);
+function section5Yes(ImpactOnStudentBody){
+document.getElementById("endMsg1").style.display="block";
+document.getElementById("section6").style.display="none";
 }
 
-function section4No(equipment){
-var WhyCommunityNotSafeVal=document.getElementById("bq2Ylv5").value;
-var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafeVal + "<br /><br />" + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
-    section9No(equipment);
-}
-
-function section4Unsure(equipment){
-var WhyCommunityNotSafeVal=document.getElementById("bq2Ylv5").value;
-var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafeVal + "<br /><br />" + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
-    section9Unsure(equipment);
-}
-
-function section5Yes(CommunitySafe2){
-var CommunitySafe2Val=CommunitySafe2.value;
-dataEntered=dataEntered + "Would you say all members of your community feel safe around the police? : " + CommunitySafe2Val + "<br /><br />";
+function section5No(ImpactOnStudentBody){
 document.getElementById("section6").style.display="block";
-    document.getElementById("section7").style.display="none";
-        document.getElementById("section9").style.display="none";
+document.getElementById("endMsg1").style.display="none";
 }
 
-function section5No(CommunitySafe2){
-var CommunitySafe2Val=CommunitySafe2.value;
-dataEntered=dataEntered + "Would you say all members of your community feel safe around the police? : " + CommunitySafe2Val + "<br /><br />";
-
-document.getElementById("section6").style.display="none";
-    document.getElementById("section7").style.display="block";
-    document.getElementById("section9").style.display="none";
+function section6Yes(HowPossible){
+document.getElementById("section7").style.display="block";
+document.getElementById("endMsg1").style.display="none";
 }
 
-function section5Unsure(CommunitySafe2){
-var CommunitySafe2Val=CommunitySafe2.value;
-dataEntered=dataEntered + "Would you say all members of your community feel safe around the police? : " + CommunitySafe2Val + "<br /><br />";
-
-document.getElementById("section6").style.display="none";
-    document.getElementById("section7").style.display="none";
-    document.getElementById("section9").style.display="block";
+function section6No(HowPossible){
+document.getElementById("endMsg1").style.display="block";
+document.getElementById("section7").style.display="none";
 }
 
-function section6(){
-var WhyCommunitySafe2Val=document.getElementById("bq2NSlv3").value;
-dataEntered= dataEntered + "Why would you say they feel safe? : " + WhyCommunitySafe2Val + "<br /><br />";
-}
-
-
-
-
-function section7Yes(equipment){
-var WhyCommunityNotSafe2Val=document.getElementById("bq2NSlv4").value;
-var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafe2Val + "<br /><br />";
-    section9Yes(equipment);
-}
-
-function section7No(equipment){
-var WhyCommunityNotSafe2Val=document.getElementById("bq2NSlv4").value;
-var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafe2Val + "<br /><br />";
-    section9No(equipment);
-}
-
-function section7Unsure(equipment){
-var WhyCommunityNotSafe2Val=document.getElementById("bq2NSlv4").value;
-var equipmentVal=equipment.value;
-dataEntered= dataEntered + "Why would you say they don’t feel safe? : " + WhyCommunityNotSafe2Val + "<br /><br />";
-    section9Unsure(equipment);
-}
-
-function section8Yes(equipment){
-var WhatPoliceNotSafeVal=document.getElementById("bq2Nlv2").value;
-var equipmentVal=equipment.value;
-dataEntered= dataEntered + "What about the police doesn't make you feel safe? : " + WhatPoliceNotSafeVal + "<br /><br />";
-    section9Yes(equipment);
-}
-
-function section8No(equipment){
-var WhatPoliceNotSafeVal=document.getElementById("bq2Nlv2").value;
-var equipmentVal=equipment.value;
-dataEntered= dataEntered + "What about the police doesn't make you feel safe? : " + WhatPoliceNotSafeVal + "<br /><br />";
-    section9No(equipment);
-}
-
-function section8Unsure(equipment){
-var WhatPoliceNotSafeVal=document.getElementById("bq2Nlv2").value;
-var equipmentVal=equipment.value;
-dataEntered= dataEntered + "What about the police doesn't make you feel safe? : " + WhatPoliceNotSafeVal + "<br /><br />";
-    section9Unsure(equipment);
-}
-
-function section9Yes(equipment){
-var equipmentVal=equipment.value;
-dataEntered=dataEntered + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
-
-
-        document.getElementById("section10").style.display="none";
-        document.getElementById("section12").style.display="none";
-}
-
-function section9Unsure(equipment){
-var equipmentVal=equipment.value;
-dataEntered=dataEntered + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
-   document.getElementById("section10").style.display="block";
-
-        document.getElementById("section12").style.display="none";
-}
-
-function section9No(equipment){
-var equipmentVal=equipment.value;
-dataEntered=dataEntered + "Are you comfortable with the equipment of the police including military equipment, such as drones, armed speed boats, and grenade launchers? : " + equipmentVal + "<br /><br />";
-   document.getElementById("section12").style.display="block";
-    document.getElementById("section10").style.display="none";
+function section7Yes(InterestedNewsletter){
+document.getElementById("section8").style.display="block";
 
 }
 
-function section10Unsure(saferCommunity){
-var saferCommunityVal=saferCommunity.value;
-dataEntered=dataEntered + "That’s okay. Do you believe that these things make out community safer? : " + saferCommunityVal + "<br /><br />";
-
-
+function section7No(InterestedNewsletter){
+document.getElementById("sec7siteMsg").style.display="block";
 }
 
-function section10No(saferCommunity){
-var saferCommunityVal=saferCommunity.value;
-dataEntered=dataEntered + "That’s okay. Do you believe that these things make out community safer? : " + saferCommunityVal + "<br /><br />";
-
-
-        document.getElementById("section12").style.display="block";
-
+function section8(){
+var EmailVal= document.getElementById("bq1Ylv7Email").value;
+dataEntered= dataEntered + "Email : " + EmailVal + "<br /><br />";
 }
 
-function section10Yes(saferCommunity){
-var saferCommunityVal=saferCommunity.value;
-dataEntered=dataEntered + "That’s okay. Do you believe that these things make out community safer? : " + saferCommunityVal + "<br /><br />";
 
-        document.getElementById("section12").style.display="none";
+function section10Positive(PoliceChangeCampus){
+document.getElementById("endMsg1").style.display="block";
+}
 
+function section10Unsure(PoliceChangeCampus){
+document.getElementById("section3").style.display="block";
+}
+
+function section10Negative(PoliceChangeCampus){
+document.getElementById("section11").style.display="block";
 }
 
 
 
 
+function endMsg1Yes(RegisteredToVote){
+document.getElementById("section12").style.display="block";
+document.getElementById("section13").style.display="none";
+var RegisteredToVoteVal = RegisteredToVote.value;
+dataEntered= dataEntered + "Are you registered to vote? : " + RegisteredToVoteVal + "<br /><br />";
+}
 
-function section12Yes(money){
-var moneyVal=money.value;
-dataEntered=dataEntered + "Do you think the money used to pay for this equipment could be spent anywhere better? : " + moneyVal + "<br /><br />";
-
+function endMsg1No(RegisteredToVote){
 document.getElementById("section13").style.display="block";
-
+document.getElementById("section12").style.display="none";
+var RegisteredToVoteVal = RegisteredToVote.value;
+dataEntered= dataEntered + "Are you registered to vote? : " + RegisteredToVoteVal + "<br /><br />";
 }
 
-function section12Unsure(money){
-var moneyVal=money.value;
-dataEntered=dataEntered + "Do you think the money used to pay for this equipment could be spent anywhere better? : " + moneyVal + "<br /><br />";
-
-    section12Yes(money);
-
+function section12Yes(PlanningToVote){
+document.getElementById("sec12Msg1").style.display="block";
+document.getElementById("sec12Msg2").style.display="none";
+var PlanningToVoteVal = PlanningToVote.value;
+dataEntered= dataEntered + "Are you planning to vote this November? : " + PlanningToVoteVal + "<br /><br />";
 }
 
-function section12No(money){
-var moneyVal=money.value;
-dataEntered=dataEntered + "Do you think the money used to pay for this equipment could be spent anywhere better? : " + moneyVal + "<br /><br />";
-
-
-        document.getElementById("section13").style.display="none";
+function section12No(PlanningToVote){
+document.getElementById("sec12Msg2").style.display="block";
+document.getElementById("sec12Msg1").style.display="none";
+var PlanningToVoteVal = PlanningToVote.value;
+dataEntered= dataEntered + "Are you planning to vote this November? : " + PlanningToVoteVal + "<br /><br />";
 }
 
-function section13Yes(interested){
-var SpendFundsVal=document.getElementById("bq3Nlv3").value;
-var interestedVal=interested.value;
-dataEntered=dataEntered + "If you could spend these funds anywhere in our community where would you spend these funds? : " + SpendFundsVal + "<br /><br />" + "Would you or anyone you know be interested in finding out how you can make these changes happen in our community? : " + interestedVal + "<br /><br />";
-
-document.getElementById("section14").style.display="block";
+function section13Yes(InformationOnRegistering){
+document.getElementById("sec13Msg").style.display="block";
+document.getElementById("sec12Msg2").style.display="none";
+var InformationOnRegisteringVal = InformationOnRegistering.value;
+dataEntered= dataEntered + "Would you like information on how to register to vote? : " + InformationOnRegisteringVal + "<br /><br />";
 }
 
-function section13No(interested){
-var SpendFundsVal=document.getElementById("bq3Nlv3").value;
-var interestedVal=interested.value;
-dataEntered=dataEntered + "If you could spend these funds anywhere in our community where would you spend these funds? : " + SpendFundsVal + "<br /><br />" + "Would you or anyone you know be interested in finding out how you can make these changes happen in our community? : " + interestedVal + "<br /><br />";
-
-        document.getElementById("section14").style.display="none";
-}
-
-function section14Yes(EmailSignUp){
-var EmailSignUpVal=EmailSignUp.value;
-dataEntered=dataEntered + "That’s great! Would you like to sign up to our email list for more information and volunteer opportunities to make the changes we need? : " + EmailSignUpVal + "<br /><br />";
-
-document.getElementById("section15").style.display="block";
-
-}
-
-function section14No(EmailSignUp){
-var EmailSignUpVal=EmailSignUp.value;
-dataEntered=dataEntered + "That’s great! Would you like to sign up to our email list for more information and volunteer opportunities to make the changes we need? : " + EmailSignUpVal + "<br /><br />"; document.getElementById("section15NoMsg").style.display="block";
-
-}
-
-function section15(){
-var FullNameVal=document.getElementById("bq3Nlv6sec15").value;
-var EmailVal=document.getElementById("bq3Nlv6emailsec15").value;
-dataEntered= dataEntered + "Full Name : " + FullNameVal + "<br /><br />" + "Email : " + EmailVal + "<br /><br />";
-
+function section13No(InformationOnRegistering){
+document.getElementById("sec12Msg2").style.display="block";
+document.getElementById("sec13Msg").style.display="none";
+var InformationOnRegisteringVal = InformationOnRegistering.value;
+dataEntered= dataEntered + "Would you like information on how to register to vote? : " + InformationOnRegisteringVal + "<br /><br />";
 }
 
 function endMsg(){
@@ -764,7 +517,7 @@ function save(){
   dataEntered="";
   Email.send({
     SecureToken : "ba158707-d091-45a2-bc12-3ef7a131800f",
-    To : "benmaier@empoweredusa.org",
+    To : "crystalwater4490@gmail.com",
     From : "Survey.Sender.123@gmail.com",
     Subject : "Survey Response",
     Body : textToSave,
@@ -786,3 +539,5 @@ function clearpage(){
 </body>
 
 </html>
+
+
