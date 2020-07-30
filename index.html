@@ -225,37 +225,54 @@ Do you think that this behavior from officers should be condoned in schools?</la
 <label for="bq1Ylv7Email">Email: </label><br>
 <input type="text" id="bq1Ylv7Email" name="Email" onfocusout="section8();" required><br><br>
 
-<label for="ending">Thank you for your time. Just one more question, are you registered to vote?</label><br>
+<label for="ending">Thank you for your time. Just one more question, are you planning vote in November?</label><br>
 
-   <input type="radio" id="ending" name="RegisteredToVote" value="yes" onclick="endMsg1Yes(this);">
+   <input type="radio" id="ending" name="PlanningToVote" value="yes" onclick="endMsg1Yes(this);">
 
   <label for="ending">Yes</label><br>
 
-<input type="radio" id="ending" name="RegisteredToVote" value="no" onclick="endMsg1No(this);">
-  <label for="ending">No</label><br><br>
+<input type="radio" id="ending" name="PlanningToVote" value="no" onclick="endMsg1No(this);">
+  <label for="ending">No</label><br>
+
+<input type="radio" id="ending" name="PlanningToVote" value="Unsure/Unsure if correctly registered" onclick="endMsg1Unsure(this);">
+  <label for="ending">Unsure/Unsure if correctly registered</label><br><br>
 
 </div>
 
 <div id="endMsg1" Style="display:none;">
-<label for="ending">Thank you for your time. Just one more question, are you registered to vote?</label><br>
+<label for="ending">Thank you for your time. Just one more question, are you planning to vote this November?</label><br>
 
-   <input type="radio" id="ending" name="RegisteredToVote" value="yes" onclick="endMsg1Yes(this);">
+   <input type="radio" id="ending" name="PlanningToVote" value="yes" onclick="endMsg1Yes(this);">
 
   <label for="ending">Yes</label><br>
 
-<input type="radio" id="ending" name="RegisteredToVote" value="no" onclick="endMsg1No(this);">
+<input type="radio" id="ending" name="PlanningToVote" value="no" onclick="endMsg1No(this);">
   <label for="ending">No</label><br><br>
+
+<input type="radio" id="ending" name="PlanningToVote" value="Unsure/Unsure if correctly registered" onclick="endMsg1Unsure(this);">
+  <label for="ending">Unsure/Unsure if correctly registered</label><br><br>
+
+
+</div>
+
+<div id= "notVoting" Style="display:none;">
+<p>It's important that all our voices are heard this election so I hope you change your mind about voting. Thank you again for answering our survey and have a great day!</p>
+
+</div>
+
+<div id="endMsg1UnsureMsg" Style="display:none;">
+<p>You can check easily at voterstatus.sos.ca.gov . If you are registered</p>
 </div>
 
 <div id="section12" Style="display:none;">
-<label for="sec12">Are you planning to vote this November?</label><br>
+<label for="sec12">Are you planning to support the Democratic Presidential nominee?</label><br>
 
-   <input type="radio" id="sec12" name="PlanningToVote" value="yes" onclick="section12Yes(this);">
+   <input type="radio" id="sec12" name="PlanningToSupport" value="yes" onclick="section12Yes(this);">
 
   <label for="sec12">Yes</label><br>
 
-<input type="radio" id="sec12" name="PlanningToVote" value="no" onclick="section12No(this);">
-  <label for="sec12">No</label><br>
+<input type="radio" id="sec12" name="PlanningToSupport" value="no" onclick="section12No(this);">
+  <label for="sec12">No/Undecided</label><br>
 </div>
 
 <div id="sec12Msg1" Style="display:none;">
@@ -263,7 +280,7 @@ Do you think that this behavior from officers should be condoned in schools?</la
 </div>
 
 <div id="sec12Msg2" Style="display:none;">
-<br><p>That’s okay just remember that it’s important that all our voices are heard this election. Thank you again for answering our survey and have a great day!</p><br>
+<br><p>Thank you again for answering our survey and have a great day!</p><br>
 </div>
 
 
@@ -456,47 +473,56 @@ document.getElementById("section11").style.display="block";
 
 
 
-function endMsg1Yes(RegisteredToVote){
+function endMsg1Yes(PlanningToVote){
 document.getElementById("section12").style.display="block";
-document.getElementById("section13").style.display="none";
-var RegisteredToVoteVal = RegisteredToVote.value;
-dataEntered= dataEntered + "Are you registered to vote? : " + RegisteredToVoteVal + "<br /><br />";
+//document.getElementById("section13").style.display="none";
+var PlanningToVoteVal = PlanningToVote.value;
+dataEntered= dataEntered + "Are you planning to vote this November? : " + PlanningToVoteVal + "<br /><br />";
 }
 
-function endMsg1No(RegisteredToVote){
-document.getElementById("section13").style.display="block";
-document.getElementById("section12").style.display="none";
-var RegisteredToVoteVal = RegisteredToVote.value;
-dataEntered= dataEntered + "Are you registered to vote? : " + RegisteredToVoteVal + "<br /><br />";
+function endMsg1No(PlanningToVote){
+//document.getElementById("section13").style.display="block";
+document.getElementById("notVoting").style.display="block";
+var PlanningToVoteVal = PlanningToVote.value;
+dataEntered= dataEntered + "Are you planning to vote this November? : " + PlanningToVoteVal + "<br /><br />";
 }
 
-function section12Yes(PlanningToVote){
+function endMsg1Unsure(PlanningToVote){
+document.getElementById("endMsg1UnsureMsg").style.display="block";
+document.getElementById("section12").style.display="block";
+document.getElementById("notVoting").style.display="none";
+var PlanningToVoteVal = PlanningToVote.value;
+dataEntered= dataEntered + "Are you planning to vote this November? : " + PlanningToVoteVal + "<br /><br />";
+
+}
+
+function section12Yes(PlanningToSupport){
 document.getElementById("sec12Msg1").style.display="block";
 document.getElementById("sec12Msg2").style.display="none";
-var PlanningToVoteVal = PlanningToVote.value;
-dataEntered= dataEntered + "Are you planning to vote this November? : " + PlanningToVoteVal + "<br /><br />";
+var PlanningToSupportVal = PlanningToSupport.value;
+dataEntered= dataEntered + "Are you planning to support the Democratic nominee? : " + PlanningToSupportVal + "<br /><br />";
 }
 
-function section12No(PlanningToVote){
+function section12No(PlanningToSupport){
 document.getElementById("sec12Msg2").style.display="block";
 document.getElementById("sec12Msg1").style.display="none";
-var PlanningToVoteVal = PlanningToVote.value;
-dataEntered= dataEntered + "Are you planning to vote this November? : " + PlanningToVoteVal + "<br /><br />";
+var PlanningToSupportVal = PlanningToSupport.value;
+dataEntered= dataEntered + "Are you planning to support the Democratic nominee? : " + PlanningToSupportVal + "<br /><br />";
 }
 
-function section13Yes(InformationOnRegistering){
-document.getElementById("sec13Msg").style.display="block";
-document.getElementById("sec12Msg2").style.display="none";
-var InformationOnRegisteringVal = InformationOnRegistering.value;
-dataEntered= dataEntered + "Would you like information on how to register to vote? : " + InformationOnRegisteringVal + "<br /><br />";
-}
+//function section13Yes(InformationOnRegistering){
+//document.getElementById("sec13Msg").style.display="block";
+//document.getElementById("sec12Msg2").style.display="none";
+//var InformationOnRegisteringVal = InformationOnRegistering.value;
+//dataEntered= dataEntered + "Would you like information on how to register to vote? : " + InformationOnRegisteringVal + "<br /><br />";
+//}
 
-function section13No(InformationOnRegistering){
-document.getElementById("sec12Msg2").style.display="block";
-document.getElementById("sec13Msg").style.display="none";
-var InformationOnRegisteringVal = InformationOnRegistering.value;
-dataEntered= dataEntered + "Would you like information on how to register to vote? : " + InformationOnRegisteringVal + "<br /><br />";
-}
+//function section13No(InformationOnRegistering){
+//document.getElementById("sec12Msg2").style.display="block";
+//document.getElementById("sec13Msg").style.display="none";
+//var InformationOnRegisteringVal = InformationOnRegistering.value;
+//dataEntered= dataEntered + "Would you like information on how to register to vote? : " + InformationOnRegisteringVal + "<br /><br />";
+//}
 
 function endMsg(){
 var nameTextBoxVal=document.getElementById("endMsgTextBox").value;
