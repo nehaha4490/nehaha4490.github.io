@@ -99,7 +99,7 @@
         <input type="text" id="endMsgTextBox" name="nameTextBox" required><br>
 
     <label for="bq1Ylv7Email">Email: </label><br>
-<input type="text" id="bq1Ylv7Email" name="Email" required><br><br>
+<input type="text" id="EmailTextBox" name="Email" required><br>
 
   <label for="numberTextBox">Phone Number: </label><br>
 <input type="text" id="endMsgTextBox2" name="numberTextBox" onfocusout="endMsg();" required><br>
@@ -250,7 +250,7 @@ dataEntered = dataEntered + "Would you like more information on Jamie? : " + mor
 function endMsg(){
 var nameTextBoxVal=document.getElementById("endMsgTextBox").value;
 var numberTextBoxVal=document.getElementById("endMsgTextBox2").value;
-var emailTextBoxVal=document.getElementById("bq1Ylv7Email").value;
+var emailTextBoxVal=document.getElementById("EmailTextBox").value;
 dataEntered= dataEntered + "Name : " + nameTextBoxVal + "<br /><br />" + "Phone Number : " + numberTextBoxVal + "<br /><br />" + emailTextBoxVal + "<br /><br />";
 nameOfInterviewee=nameTextBoxVal;
 }
