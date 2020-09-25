@@ -75,11 +75,11 @@
 
   <label for="bq1">No</label><br><br>
 </div>
- 
+
 
 <div id="section2" Style="display:none;">
 
-  
+
  <label for="bq1YLv1">How did the officer on campus change the school experience for you?</label><br>
 
    <input type="radio" id="bq1YLv1" name="OfficerCampusChange" value="positive" onclick="section2Positive(this);">
@@ -95,7 +95,7 @@
   <label for="bq1YLv1">Negative</label><br><br>
 </div>
 
-  
+
 
 
 
@@ -117,7 +117,7 @@
 </div>
 
 
-<div id="section10" Style="display:none;">  
+<div id="section10" Style="display:none;">
   <label for="bq1NLv1">If there was a police officer on campus, do you think that would have changed the school experience for you and the people you know?</label><br>
 
    <input type="radio" id="bq1NLv1" name="PoliceChangeCampus" value="positive" onclick="section10Positive(this);">
@@ -127,7 +127,7 @@
 <input type="radio" id="bq1NLv1" name="PoliceChangeCampus" value="unsure" onclick="section10Unsure(this);">
 
   <label for="bq1NLv1">Unsure</label><br>
-  
+
   <input type="radio" id="bq1YLv5" name="PoliceChangeCampus" value="negative" onclick="section10Negative(this);">
 
   <label for="bq1NLv1">Negative</label><br><br>
@@ -150,7 +150,7 @@
   <label for="bq1YLv4">No</label><br><br>
 </div>
 
-<div id="section3" Style="display:none;">  
+<div id="section3" Style="display:none;">
   <label for="bq1YLv2">That's okay. Would you like to hear a story from a California student about their experiences with officers in schools?</label><br>
 
    <input type="radio" id="bq1YLv2" name="Story" value="yes" onclick="section3Yes(this);">
@@ -162,24 +162,24 @@
   <label for="bq1YLv2">No</label><br><br>
 </div>
 
-<div id="section4" Style="display:none;">  
+<div id="section4" Style="display:none;">
   <label for="bq1YLv3">Great! This following story was from an LA Times Article about a high school in Southern California. The police on campus were officially referred to as “school resource officers” just for clarification. After an altercation between two students broke out into a fight, the school resource officers went to the scene to stop it. However, the campus officers quickly turned the two person incident into a brawl after using pepper spray to diffuse the situation. The pepper spray was used on nearly 30 other students, mostly bystanders. Eight students were eventually detained and one had to be taken to the hospital.<br><br>
 Do you think that this behavior from officers should be condoned in schools?</label><br>
 
    <input type="radio" id="bq1YLv3" name="StoryQ" value="yes" onclick="section4Yes(this);">
 
   <label for="bq1YLv3">Yes</label><br>
-   
+
    <input type="radio" id="bq1YLv3" name="StoryQ" value="unsure" onclick="section4Unsure(this);">
 
   <label for="bq1YLv3">Unsure</label><br>
-  
+
   <input type="radio" id="bq1YLv3" name="StoryQ" value="no" onclick="section4No(this);">
 
   <label for="bq1YLv3">No</label><br><br>
 </div>
 
-<div id="section5" Style="display:none;">  
+<div id="section5" Style="display:none;">
   <label for="bq1YLv4">Do you believe that police officers should be present on school campuses if they have a negative impact on the student body?</label><br>
 
    <input type="radio" id="bq1YLv4" name="ImpactOnStudentBody" value="yes" onclick="section5Yes(this);">
@@ -191,7 +191,7 @@ Do you think that this behavior from officers should be condoned in schools?</la
   <label for="bq1YLv4">No</label><br><br>
 </div>
 
-<div id="section6" Style="display:none;">  
+<div id="section6" Style="display:none;">
   <label for="bq1YLv5">Would you like to hear how you can make this possible  in your community and California?</label><br>
 
    <input type="radio" id="bq1YLv5" name="HowPossible" value="yes" onclick="section6Yes(this);">
@@ -203,7 +203,7 @@ Do you think that this behavior from officers should be condoned in schools?</la
   <label for="bq1YLv5">No</label><br><br>
 </div>
 
-<div id="section7" Style="display:none;">  
+<div id="section7" Style="display:none;">
   <label for="bq1YLv6">Would you be interested in signing up for an informational newsletter related to empowering and protecting our students and also hear about volunteer opportunities?</label><br>
 
    <input type="radio" id="bq1YLv6" name="InterestedNewsletter" value="yes" onclick="section7Yes(this);">
@@ -542,9 +542,9 @@ function save(){
   var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
   dataEntered="";
   Email.send({
-    SecureToken : "ba158707-d091-45a2-bc12-3ef7a131800f",
+    SecureToken : "7ca40223-5ebe-4d21-8e28-dd202833ff66",
     To : "nehasunil1137@gmail.com",
-    From : "Survey.Sender.123@gmail.com",
+    From : "Survey.Sender.456@gmail.com",
     Subject : "Survey Response",
     Body : textToSave,
   }).then(
@@ -565,5 +565,3 @@ function clearpage(){
 </body>
 
 </html>
-
-
