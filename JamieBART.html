@@ -81,8 +81,7 @@
 
 <div id="section4" Style="display:none;">
 
-
- <label for="bq1YLv3">That's okay! Would you like to be put on a list to find out about volunteer opportunities for Jamie?</label><br>
+<label for="bq1YLv3">That's okay! Would you like to be put on a list to find out about volunteer opportunities for Jamie?</label><br>
 
    <input type="radio" id="bq1YLv3" name="volunteer" value="yes" onclick="section4Yes(this);">
 
@@ -209,8 +208,8 @@ dataEntered = dataEntered + "Are you interedted in a lawn sign? : " + LawnSignVa
 }
 
 function section2No(LawnSign){
-document.getElementById("section3").style.display="block";
-document.getElementById("section4").style.display="none";
+document.getElementById("section4").style.display="block";
+document.getElementById("section3").style.display="none";
 var LawnSignVal = document.getElementById("bq1YLv1").value;
 dataEntered = dataEntered + "Are you interedted in a lawn sign? : " + LawnSignVal + "<br /><br />";
 }
