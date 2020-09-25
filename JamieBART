@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </head>
+
+<body>
+
+
+
+<h2>Community Survey</h2>
+
+<form action="/action_page.php">
+
+<br>
+
+<div id="intro">
+  <label for="q1">Hi! Am I speaking with _______</label><br>
+
+    <input type="radio" id="q1" name="answer" value="yes" onclick="introAnswer(this);">
+<label for="q1">Yes (Speaking to Correct Person)</label><br>
+
+  <input type="radio" id="q1" name="answer" value="no answer" onclick="introToEnd2(this);">
+<label for="q1">No Answer</label><br>
+
+    <input type="radio" id="q1" name="answer" value="not home" onclick="introToEnd3(this);">
+<label for="q1">Not Home</label><br>
+
+    <input type="radio" id="q1" name="answer" value="different language" onclick="introToEnd3(this);">
+<label for="q1">Different Language</label><br>
+
+    <input type="radio" id="q1" name="answer" value="dont call again" onclick="introToEnd3(this);">
+<label for="q1">Don't Call Again</label><br>
+
+    <br>
+</div>
+
+
+
+<div id="section1" Style="display:none;">
+<label for="second">My name is ______ and I am a volunteer with a Jamie Salisido for BART, how are you doing today [wait for response]</label><br><br>
+
+
+  <label for="bq1">The elections this fall are a time where you can make your voice heard, even with how BART is managed. Will you be voting for Jamie Salicido for BART Board this November?</label><br>
+
+   <input type="radio" id="bq1" name="voting" value="yes" onclick="section1Yes(this);">
+
+  <label for="bq1">Yes</label><br>
+
+   <input type="radio" id="bq1" name="voting" value="no" onclick="section1No(this);">
+
+  <label for="bq1">No</label><br>
+
+  <input type="radio" id="bq1" name="voting" value="unsure" onclick="section1Unsure(this);">
+
+  <label for="bq1">Unsure</label><br>
+
+ <br>
+</div>
+
+<div id="section2" Style="display:none;">
+
+
+ <label for="bq1YLv1">That's great to hear! If we want a shot at making a better BART we really need your support this fall. Are you interested in a lawn sign?</label><br>
+
+   <input type="radio" id="bq1YLv1" name="LawnSign" value="yes" onclick="section2Yes(this);">
+
+  <label for="bq1YLv1">Yes</label><br>
+
+  <input type="radio" id="bq1YLv1" name="LawnSign" value="undecided" onclick="section2Unsure(this);">
+
+  <label for="bq1YLv1">Undecided</label><br>
+
+  <input type="radio" id="bq1YLv1" name="LawnSign" value="no" onclick="section2No(this);">
+
+  <label for="bq1YLv1">No</label><br><br>
+</div>
+
+
+
+<div id="section4" Style="display:none;">
+
+
+ <label for="bq1YLv3">That's okay! Would you like to be put on a list to find out about volunteer opportunities for Jamie?</label><br>
+
+   <input type="radio" id="bq1YLv3" name="volunteer" value="yes" onclick="section4Yes(this);">
+
+  <label for="bq1YLv3">Yes</label><br>
+
+  <input type="radio" id="bq1YLv3" name="volunteer" value="no" onclick="section4No(this);">
+
+  <label for="bq1YLv3">No</label><br><br>
+</div>
+<div id="section3" Style="display:none;">
+<label for="bq1YLv2">Awesome! All I need is your name, number, and email address.</label><br>
+
+   <label for="endMsgTextBox">Name: </label><br>
+        <input type="text" id="endMsgTextBox" name="nameTextBox" required><br>
+
+    <label for="bq1Ylv7Email">Email: </label><br>
+<input type="text" id="bq1Ylv7Email" name="Email" required><br><br>
+
+  <label for="numberTextBox">Phone Number: </label><br>
+<input type="text" id="endMsgTextBox2" name="numberTextBox" onfocusout="endMsg();" required><br>
+<br>
+<p>Well it was great talking with you and we hope you have a great day!</p><br><br>
+</div>
+
+<div id="section5" Style="display:none;">
+
+   <label for="bq1YLv4">That's okay! I'm voting for Jamie because a clean and safe BART is her top priority. She's currently a Transportation Commissioner for Walnut Creek and has real experience solving transit safety problems. She also has a background in urban design and is also endorsed by the Sierra Club and the California Democratic Party. Would you like more information on Jamie?</label><br>
+
+   <input type="radio" id="bq1YLv4" name="moreInfo" value="yes" onclick="section5Yes(this);">
+<label for="bq1YLv4">Yes</label><br>
+
+  <input type="radio" id="bq1YLv4" name="moreInfo" value="no" onclick="section5No(this);">
+<label for="bq1YLv4">No</label><br><br>
+</div>
+
+<div id="section6" Style="display:none;">
+<p>Great, you can go to jamieforbart.com and read her story and positions on the issues. Well it was great talking with you and we hope you have a great day!</p>
+
+</div>
+
+<div id="endMsg1" Style="display:none;">
+<p>Well it was great talking with you and we hope you have a great day!</p>
+</div>
+
+<div id="endMsg2" Style="display:none;">
+<p>Hi, this is _____, a volunteer with Jamie Salcido’s campaign for BART Board.  Sorry I missed you.  I was calling to encourage you to vote for Jamie because her top priority is a clean and safe BART. She’s currently a Transportation Commissioner for Walnut Creek and has real experience solving transit safety problems.  She also has a background in urban design and is also endorsed by the Sierra Club and the California Democratic Party. If you would like to hear more about Jamie you can go to her website at jamieforbart.com</p>
+</div>
+
+<div id="endMsg3" Style="display:none;">
+<p>Sorry to bother you and have a great day!</p>
+</div>
+
+<div id="endMsg" Style="display:block;">
+<br><input type="submit" value="Submit" onclick="save()" >
+<br /><br /><span style="color:red">* Note: </span>
+<span>Once you press Submit, the survey data will be emailed to Ben. The page will reload automatically and it will be ready for the next call.
+</span>
+<!—end message—>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var nameOfInterviewee="";
+var dataEntered="";
+
+function introAnswer(answer){
+        document.getElementById("section1").style.display="block";
+document.getElementById("endMsg2").style.display="none";
+document.getElementById("endMsg3").style.display="none"
+var answerVal = document.get.ElementById("q1").value;
+dataEntered = dataEntered + "Hi! Am I speaking with _____ ? : " + answerVal + "<br /><br />";
+}
+
+function introtoEnd2(answer){
+document.getElementById("endMsg2").style.display="block";
+document.getElementById("endMsg3").style.display="none";
+document.getElementById("section1").style.display="none"
+var answerVal = document.get.ElementById("q1").value;
+dataEntered = dataEntered + "Hi! Am I speaking with _____ ? : " + answerVal + "<br /><br />";
+}
+
+function introToEnd3(answer){
+document.getElementById("endMsg3").style.display="block";
+document.getElementById("endMsg2").style.display="none";
+document.getElementById("section1").style.display="none"
+var answerVal = document.get.ElementById("q1").value;
+dataEntered = dataEntered + "Hi! Am I speaking with _____ ? : " + answerVal + "<br /><br />";
+}
+
+function section1Yes(voting){
+document.getElementById("section2").style.display="block";
+var VotingVal = document.getElementById("bq1").value;
+dataEntered = dataEntered + "Will you be voting for Jamie Salicido for BART Board this November? : " + VOtingVal + "<br /><br />";
+}
+
+function section1No(voting){
+document.getElementById("section5").style.display="block";
+var VotingVal = document.getElementById("bq1").value;
+dataEntered = dataEntered + "Will you be voting for Jamie Salicido for BART Board this November? : " + VOtingVal + "<br /><br />";
+}
+
+function section1Unsure(voting){
+document.getElementById("section5").style.display="block";
+document.getElementById("section2").style.display="none";
+var VotingVal = document.getElementById("bq1").value;
+dataEntered = dataEntered + "Will you be voting for Jamie Salicido for BART Board this November? : " + VOtingVal + "<br /><br />";
+}
+
+function section2Yes(LawnSign){
+document.getElementById("section3").style.display="block";
+document.getElementById("section4").style.display="none";
+var LawnSignVal = document.getElementById("bq1YLv1").value;
+dataEntered = dataEntered + "Are you interedted in a lawn sign? : " + LawnSignVal + "<br /><br />";
+}
+
+function section2No(LawnSign){
+document.getElementById("section3").style.display="block";
+document.getElementById("section4").style.display="none";
+var LawnSignVal = document.getElementById("bq1YLv1").value;
+dataEntered = dataEntered + "Are you interedted in a lawn sign? : " + LawnSignVal + "<br /><br />";
+}
+
+function section2Unsure(LawnSign){
+document.getElementById("section4").style.display="block";
+document.getElementById("section3").style.display="none";
+var LawnSignVal = document.getElementById("bq1YLv1").value;
+dataEntered = dataEntered + "Are you interedted in a lawn sign? : " + LawnSignVal + "<br /><br />";
+}
+
+function section4Yes(volunteer){ document.getElementById("section3").style.display="block";
+document.getElementById("endMsg1").style.display="none";
+var volunteerVal = document.getElementById("bq1YLv3").value;
+dataEntered = dataEntered + "Would you like to be put on a list to find out about volunteer opportunities for Jamie? : " + volunteerVal + "<br /><br />";
+}
+
+function section4No(volunteer){     document.getElementById("endMsg1").style.display="block";
+document.getElementById("section3").style.display="none";
+var volunteerVal = document.getElementById("bq1YLv3").value;
+dataEntered = dataEntered + "Would you like to be put on a list to find out about volunteer opportunities for Jamie? : " + volunteerVal + "<br /><br />";
+}
+
+function section5Yes(moreInfo){
+document.getElementById("section6").style.display="block";
+document.getElementById("endMsg1").style.display="none";
+moreInfoVal=document.getElementById("bq1YLv4").value;
+dataEntered = dataEntered + "Would you like more information on Jamie? : " + moreInfoVal + "<br /><br />";
+}
+
+function section5No(moreInfo){ document.getElementById("endMsg1").style.display="block";
+document.getElementById("section6").style.display="none";
+var moreInfoVal=document.getElementById("bq1YLv4").value;
+dataEntered = dataEntered + "Would you like more information on Jamie? : " + moreInfoVal + "<br /><br />";
+}
+
+function endMsg(){
+var nameTextBoxVal=document.getElementById("endMsgTextBox").value;
+var numberTextBoxVal=document.getElementById("endMsgTextBox2").value;
+var emailTextBoxVal=document.getElementById("bq1Ylv7Email").value;
+dataEntered= dataEntered + "Name : " + nameTextBoxVal + "<br /><br />" + "Phone Number : " + numberTextBoxVal + "<br /><br />" + emailTextBoxVal + "<br /><br />";
+nameOfInterviewee=nameTextBoxVal;
+}
+
+
+function save(){
+  var d=new Date();
+  var timestamp = d.getFullYear().toString() + (d.getMonth()+1).toString() + d.getDate().toString() + d.getHours().toString() + d.getMinutes().toString();
+
+  var fileHeading = "SURVEY RESULTS FOR " + nameOfInterviewee + " ON " + d.getFullYear().toString() + (d.getMonth()+1).toString() + d.getDate().toString() + " AT " + d.getHours().toString() +":"+ d.getMinutes().toString();
+
+  var textToSave = fileHeading + "<br /><br />" + dataEntered;
+  var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+  dataEntered="";
+  Email.send({
+    SecureToken : "7ca40223-5ebe-4d21-8e28-dd202833ff66",
+    To : "nehasunil1137@gmail.com",
+    From : "Survey.Sender.456@gmail.com",
+    Subject : "Survey Response",
+    Body : textToSave,
+  }).then(
+    message => clearpage()
+  );
+
+
+}
+function clearpage(){
+  location.reload();
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
